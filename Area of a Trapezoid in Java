@@ -1,0 +1,26 @@
+package conceptsOfProgrammingLang;
+
+//The purpose of this class is to compute the area of a trapezoid
+import javax.swing.*;
+public class Area {
+	public static void main(String [] args) { 
+		boolean cont = true;	//This variable is the user's decision if they want to find the area of a different trapezoid
+		
+		//Variable Initialization
+		double base1 = 0.0;
+		double base2 = 0.0;
+		double height = 0.0;
+
+		base1 = Double.parseDouble(JOptionPane.showInputDialog("Enter a measurement for base 1 in inches: ",null)); 	//a
+		base2 = Double.parseDouble(JOptionPane.showInputDialog("Enter a measurement for base 2 in inches: ",null)); 	//b
+		height = Double.parseDouble(JOptionPane.showInputDialog("Enter a measurement for height in inches: ",null)); 	//h
+			
+		//The area for a trapezoid is 0.5(h)(a+b)
+		double area = (0.5) * (base1 + base2) * (height);
+		
+		//Outputs the values of measurement for the trapezoid and the area 
+		JOptionPane.showMessageDialog(null, "The area of a trapezoid with the following information...\n\nBase1: " 
+										+ base1 + " inches\nBase2: " + base2 + " inches\nHeight: " + height 
+										+ " inches\n\n...has an area of " + area + " square feet.");
+	}
+}
